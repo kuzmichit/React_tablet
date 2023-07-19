@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  height: 80vh;
+  width: 80vw;
+  background-color: orangered;
+  color: white;
+  margin: 0 auto;
+}
+
+.wrapper h1 {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid green;
+  width: 80%;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.item {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: lightcoral;
+  margin-top: 10px;
+  min-height: 50px;
+
+}
+
+.item button {
+  height: 30px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.addtodo {
+  margin-top: 50px;
+  align-items: center;
+
+}
+
+.addtodo input {
+  background-color: white;
+}
+
+.addtodo button {
+  width: 150px;
+  border-radius: 10px;
+
+}
+
+input {
+  padding-left: 10px;
+  line-height: 30px;
+  font-size: 20px;
+  margin-right: 20px;
+  border: 1px solid white;
+  background-color: lightcoral;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+input:focus {
+  outline: none;
+  background-color: orangered;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn button:not(:last-child) {
+  margin-right: 10px;
+}

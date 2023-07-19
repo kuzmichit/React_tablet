@@ -1,0 +1,7 @@
+{
+  "run": {
+    "type": "url",
+    "task": "",
+    "url": "localhost:9950"
+  }
+}
