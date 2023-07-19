@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import { hot } from 'react-hot-loader/root';
 import dataContext from './context'
 
-
+import pencil from '../Images/pencil.png';
+import trash from '../Images/trash.png';
 import './style.css'
 
 export const ListTodos = (props) => {
@@ -45,7 +46,6 @@ const ItemTodo = (props) => {
   const [changing, setChanging] = useState(false);
   const [inputValue, setInputValue] = useState(text);
   const context = useContext(dataContext);
-  console.log(list);
   const createItem = () => {
     const onValueChange = e => setInputValue(e.target.value)
 
@@ -62,9 +62,9 @@ const ItemTodo = (props) => {
           value={inputValue}
           onChange={ onValueChange }/>
         <div className='btn'
-        onClick={ () => onCorrectClick(id) }><button disabled={context.disabled}
-        ><i>edit</i></button>
-        <button><i onClick={ () => onDeleteClick(id) }>delete</i></button></div>
+        onClick={ () => onCorrectClick(id) }>
+        <button disabled={context.disabled}><img src={pencil} alt="edit"/></button>
+        <button><img src={trash} alt="delete"/></button></div>
         
       </li>
     );
