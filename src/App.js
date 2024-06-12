@@ -1,17 +1,22 @@
 import React from "react";
-import { hot } from 'react-hot-loader/root';
-import {TodoApp} from './TodoApp/TodoApp'
+import { Container } from "react-bootstrap";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import Navbar from './CocktailApp/Navbar'
+import Main from "./CocktailApp/main";
 
 class App extends React.Component {
   
   render() {
     
     return (
-    
-        <TodoApp/>
-        
+      <Container className="p-3">
+        <header>
+          <Navbar />
+        </header>
+      </Container>
     );
   }
 }
 
-export default hot(App);
+export default App;

@@ -18,19 +18,28 @@ export const TodoApp = () => {
   }
   
   function addItem(text) {
+    if(text.length < 5) return;
     const newList = [...list];
-    newList.push(text);
+    newList.push({text, disabled: false});
     setList(newList);
   }
   function disableBtn(id, changing) {
     const newList = [...list];
     newList.map((item, i) => {
+      if (changing) {
+        item.disabled = false;
+        return;
+      }
       if(id === i) return;
       item.disabled = true;
     } )
     setList(newList);
-    console.log(newList);
   }
+
+  function onDeleteClick(id) {
+     const newList = list.filter((item, i) => { return i !== id } )
+    setList(newList);
+  } 
   
   return (
     <div className='wrapper'>
@@ -40,8 +49,8 @@ export const TodoApp = () => {
       <Provider value={list}>
       <ListTodos 
         updateItem = { (id, text) => updateItem(id, text)}
-        List={ list }
         disableBtn={(id, changing)=> disableBtn(id, changing)}
+        onDeleteClick={(id => onDeleteClick(id))}
         />
       <AddTodo addItem={ addItem }/>
       </Provider>

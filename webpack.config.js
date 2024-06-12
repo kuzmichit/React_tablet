@@ -1,10 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   mode: 'development',
   entry: [
-    'react-hot-loader/patch',
     './src/index.js'
   ],
   output: {
@@ -26,7 +26,7 @@ const config = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
-    ]
+   ]
   },
   resolveLoader: {
     modules: [
@@ -43,9 +43,6 @@ const config = {
       '.js',
       '.jsx'
     ],
-    alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
   },
   devServer: {
     port: 9950,

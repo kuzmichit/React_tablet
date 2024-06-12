@@ -11,7 +11,7 @@ export const ListTodos = (props) => {
   const [changing, setChanging] = useState(false);
   const [inputValue, setInputValue] = useState(' ');
   
-  const { updateItem, disableBtn} = props;
+  const { updateItem, disableBtn, onDeleteClick} = props;
   const context = useContext(dataContext);
 
   const createList = () => {
@@ -25,7 +25,8 @@ export const ListTodos = (props) => {
         id= {i}
         updateItem = {updateItem}
         disableBtn={disableBtn}
-        disabled={context.disabled}/>
+        disabled ={item.disabled}
+        onDeleteClick={ onDeleteClick} />
         )
     } )
 
@@ -42,13 +43,12 @@ export const ListTodos = (props) => {
 
 const ItemTodo = (props) => {
 
-  const { text, id, updateItem, disableBtn} = props;
+  const { text, id, updateItem, disableBtn, disabled, onDeleteClick} = props;
   const [changing, setChanging] = useState(false);
   const [inputValue, setInputValue] = useState(text);
-  const context = useContext(dataContext);
+
   const createItem = () => {
     const onValueChange = e => setInputValue(e.target.value)
-
 
     return (
       <li
@@ -60,11 +60,14 @@ const ItemTodo = (props) => {
           className= { changing ? null : 'visually-hidden' }
           type='text'
           value={inputValue}
+          
           onChange={ onValueChange }/>
-        <div className='btn'
-        onClick={ () => onCorrectClick(id) }>
-        <button disabled={context.disabled}><img src={pencil} alt="edit"/></button>
-        <button><img src={trash} alt="delete"/></button></div>
+        <div className='btn'>
+        <button 
+        disabled={disabled}
+        onClick={ () => onCorrectClick(id)}> <img src={pencil} alt="edit" /> </button>
+        <button onClick={ () => onDeleteClick(id)} ><img src={trash} alt="delete" /> </button>
+        </div>
         
       </li>
     );
@@ -75,7 +78,8 @@ const ItemTodo = (props) => {
   function onCorrectClick(id) {
     setChanging(!changing);
     if(changing) updateItem(id, inputValue);
-    disableBtn(id, changing)
+    disableBtn(id, changing);
   }
   return item;
 }
+

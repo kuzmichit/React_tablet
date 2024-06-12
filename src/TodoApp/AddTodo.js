@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import { hot } from 'react-hot-loader/root';
 
 import './style.css'
+import add from '../Images/add.png';
 
 export const AddTodo = (props) => {
   const [inputValue, setInputValue] = useState(' ');
@@ -21,8 +21,8 @@ export const AddTodo = (props) => {
     type='text'
     onChange = {onValueChange}
     value={inputValue}></input>
-  <button className=''
-    onClick={(e)=> onAddClick(e,inputValue)}>add</button>
+  <button className='add'
+    onClick={(e)=> onAddClick(e,inputValue)}> <img src={add} alt="add" /> </button>
   </div>
   )
 }
