@@ -2,26 +2,29 @@
 import { Link } from "react-router-dom";
 import {Row, Col} from "react-bootstrap"
 import React, { useState } from "react";
+import bootstrap from 'bootstrap';
 
 import './style.css'
-import cocktail_logo from '../Images/cocktail_logo.png';
+import logo from './logo.png';
 
 
 const Navbar = () => {
   return (
-    <Row className="d-flex justify-content-between">
-      <Col sm='4' className="">
-        <img className="logo" src={cocktail_logo} />
+    <header className="header-main bg-info mt-3">
+    <Row className='header_logo'>
+      <Col className="d-flex align-content-center">
+        <img className="logo" src={logo} />
+        <div className=' ps-2 header__text'>Cocktai bar</div>
       </Col>
-      <Col sm='6' className="align-content-center">
-        <Row sm='6' className="justify-content-end">
-          <Col sm='2'>IT</Col>
-          <Col sm='2'>EN</Col>
-          <Col sm='2'>ES</Col>
-        </Row>
+      <Col className="d-flex align-content-center flex-nowrap border">
+      <Row xs={6} className=''>
+          u<Col xs={3} className=''>IT</Col>
+          <Col xs={2} className=''>EN</Col>
+          <Col xs={2} className=''>ES</Col>
+      </Row>
       </Col>
-       
-  </Row>
+      </Row>
+  </header>
 );
 }
 

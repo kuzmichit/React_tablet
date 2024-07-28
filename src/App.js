@@ -1,21 +1,33 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import Navbar from './CocktailApp/Navbar'
-import Main from "./CocktailApp/main";
+import React from "react";
+import Row from 'react-bootstrap/Row';
+import {Col, Container} from 'react-bootstrap';
+
+import {
+BrowserRouter as Router,
+Routes,
+Route,
+Link,
+} from "react-router-dom";
+import HeaderApp from './CocktailApp/HeaderApp.jsx';
+import TmpBootStrap from './CocktailApp/tmpBootStrap.js';
+import Slides from './CocktailApp/Slides.jsx'
+
 
 class App extends React.Component {
   
   render() {
+  
+    const { name } = this.props;
     
     return (
-      <Container className="p-3">
-        <header>
-          <Navbar />
-        </header>
+      <Router>
+      <Container>
+          {/*{<HeaderApp/>}*/}
+          <Slides/>
       </Container>
-    );
+      </Router>
+  )
   }
 }
 

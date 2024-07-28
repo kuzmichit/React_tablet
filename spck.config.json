@@ -2,6 +2,17 @@
   "run": {
     "type": "url",
     "task": "",
-    "url": "localhost:9950"
+    "tasks": {
+      "if": [
+        [
+          "!exists",
+          "node_modules"
+        ]
+      ],
+      "then": "npm/install-dep"
+    },
+    "file": "dist/index.html",
+    "ignoreCurrent": true,
+    "url": "http://localhost:9950"
   }
 }
