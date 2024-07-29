@@ -6,17 +6,17 @@ import img from './Slides/2x8thr1504816928.jpg';
 
 export default (props) => {
   
-  const {id, src, title, text} = props
+  const {id, src, title='00000000', text='11111111'} = props
   
   return (
     <Card 
     id = {id}
     onClick={() => console.log(id)}>
       <Card.Img variant="top" src={img} className='img'/>
-      <Card.Body>
+      {/* <Card.Body>
         <Card.Title>({title})</Card.Title>
         <Card.Text>{text}</Card.Text>
-      </Card.Body>
+      </Card.Body> */}
     </Card>
   );
 }

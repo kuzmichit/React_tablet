@@ -13,34 +13,59 @@ import CardCocktail from './Card.jsx';
 import drinks from './Drinks.json'
 
 export default () => {
+
+  const A = () => {
+
+    // const elements = () => {
+    //  return (
+    //     <Card
+    //       id={id}
+    //       onClick={() => console.log(id)}>
+    //       <Card.Img variant="top" src={img} className='img' />
+    //       <Card.Body>
+    //       <Card.Title>({222222222})</Card.Title>
+    //       <Card.Text>{33333}</Card.Text>
+    //     </Card.Body>
+    //     </Card>
+    //   );
+    // };
   
-  const getSrcImage = (path=[]) => {
-      let res = path.split('/')
-      res[res.length - 1] 
-      console.log(res)
-      return res
+    return (
+      <SwiperSlide>
+        {<CardCocktail/>}
+      </SwiperSlide>
+    )
+  }
+
+  
+  const getSrcImage = (path = []) => {
+    let src = path.split('/')
+    src = src[src.length - 1]
+    return src
   }
   const CreateSlides = () => {
+    let count = 0;
     
-   
-    const createSlides = drinks.drinks.map((item, i) => {
-      console.log(item.idDrink, 111)
+    const slides = drinks.drinks.map((item, i) => {
       
-      {
+    return (
         <SwiperSlide>
-        {<CardCocktail
-        id = {item.idDrink}
-        src = {getSrcImage(item.strDrinkThumb)}
-        title = {item.strDrink}
-        text = {item.strInstructionsIT}
-        />}
+          <CardCocktail
+            id={item.idDrink}
+            src={getSrcImage(item.strDrinkThumb)}
+            title={item.strDrink}
+            text={item.strInstructionsIT}
+          />
         </SwiperSlide>
-      }
-      } )
-      }
+      )
+    })
+    console.log(slides);
+    
+  }
       
-   const Slides = CreateSlides();
-   console.log(Slides, 'slides')
+  const Slides = CreateSlides();
+  
+  const b = `<SwiperSlide>{<CardCocktail/>}</SwiperSlide>`
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar]}
@@ -50,9 +75,9 @@ export default () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-    
-    <SwiperSlide>Slide 1</SwiperSlide>
-    <SwiperSlide>Slide 1</SwiperSlide>
+      {/* <Slides/> */}
+      <SwiperSlide>{<CardCocktail/>}</SwiperSlide>
+      <SwiperSlide>Slide 1</SwiperSlide>
     </Swiper>
   );
-} ;
+}
