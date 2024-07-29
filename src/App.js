@@ -12,6 +12,7 @@ Link,
 import HeaderApp from './CocktailApp/HeaderApp.jsx';
 import TmpBootStrap from './CocktailApp/tmpBootStrap.js';
 import Slides from './CocktailApp/Slides.jsx'
+import Test from './CocktailApp/test.jsx'
 
 
 class App extends React.Component {
@@ -24,7 +25,8 @@ class App extends React.Component {
       <Router>
       <Container>
           {/*{<HeaderApp/>}*/}
-          <Slides/>
+          {/* <Slides/> */}
+          <Test/>
       </Container>
       </Router>
   )
