@@ -10,13 +10,12 @@ export default (props) => {
   
   return (
     <Card 
-    id = {id}
     onClick={() => console.log(id)}>
       <Card.Img variant="top" src={src} className='img'/>
-      {/* <Card.Body>
-        <Card.Title>({title})</Card.Title>
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>
-      </Card.Body> */}
+      </Card.Body>
     </Card>
   );
 }

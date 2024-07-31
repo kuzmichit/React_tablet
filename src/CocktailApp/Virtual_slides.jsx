@@ -1,5 +1,5 @@
 import React from "react";
-import { Virtual } from 'swiper/modules';
+import { Virtual, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -19,20 +19,25 @@ const getSrcImage = (path = []) => {
   src = src[src.length - 1]
   return src
 }
-let imgRiquare = require.context('./Slides', true)
-const imageList = imgRiquare.keys();
-console.log(imageList[0])
+let images = require.context('./Slides', true)
+const imageList = images.keys().map(image => images(image));
+console.log(images.keys(), imageList)
 
   return (
     <Swiper 
-    modules={[Virtual]}
+      style={{ maxWidth: '992px', marginTop: '50px', border: 'none' }}
+      className="test"
+      modules={[Virtual, Navigation]}
+      navigation
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
     spaceBetween={50}
     slidesPerView={1}
     virtual>
       {listDrinks.map((item, index) => (
-        <SwiperSlide key={item.idDrink} virtualIndex={index}>
+        <SwiperSlide key={item.idDrink} virtualIndex={index} style={{ border: 'none !important' }} >
           {<CardCocktail
-            src={imageList[6]}
+            src={imageList[index]}
             title={item.strDrink}
             text={item.strInstructionsIT}
           />}
