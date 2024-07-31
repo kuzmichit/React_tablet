@@ -12,7 +12,7 @@ export default (props) => {
     <Card 
     id = {id}
     onClick={() => console.log(id)}>
-      <Card.Img variant="top" src={img} className='img'/>
+      <Card.Img variant="top" src={src} className='img'/>
       {/* <Card.Body>
         <Card.Title>({title})</Card.Title>
         <Card.Text>{text}</Card.Text>

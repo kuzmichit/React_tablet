@@ -13,6 +13,7 @@ import HeaderApp from './CocktailApp/HeaderApp.jsx';
 import TmpBootStrap from './CocktailApp/tmpBootStrap.jsx';
 import Slides from './CocktailApp/Slides.jsx'
 import Test from './CocktailApp/test.jsx'
+import VirtualSlides from './CocktailApp/Virtual_slides.jsx';
 
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
       <Container>
           {/*{<HeaderApp/>}*/}
           {/* <Slides/> */}
-          <Test/>
+          {<VirtualSlides/>}
       </Container>
       </Router>
   )
