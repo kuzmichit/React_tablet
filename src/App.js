@@ -10,7 +10,7 @@ Route,
 Link,
 } from "react-router-dom";
 import HeaderApp from './CocktailApp/HeaderApp.jsx';
-import TmpBootStrap from './CocktailApp/tmpBootStrap.js';
+import TmpBootStrap from './CocktailApp/tmpBootStrap.jsx';
 import Slides from './CocktailApp/Slides.jsx'
 import Test from './CocktailApp/test.jsx'
 

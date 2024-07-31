@@ -77,7 +77,7 @@ export default () => {
     >
       {/* <Slides/> */}
       <SwiperSlide>{<CardCocktail/>}</SwiperSlide>
-      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
     </Swiper>
   );
 }
