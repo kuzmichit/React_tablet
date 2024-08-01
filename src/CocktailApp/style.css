@@ -12,13 +12,15 @@
   border: none;
 }
 
-img {
+.card {
   max-width: 80%;
   display: block;
   height: auto;
   margin: auto;
 }
-
+ .container{
+ }
+ 
 .logo {
   width: 60px;
   height: 60px;
@@ -29,12 +31,17 @@ img {
 }
 
 .header-main {
+      width: 98%;
+      margin: 30px auto;
       padding: 0 0 0 0;
+      border-radius: 10px;
 }
 
 .swiper {
+  width: 98%;
   height: 100%;
 }
 
 .swiper-slide{
+  boorder: 5px solid greeen !important;
 }

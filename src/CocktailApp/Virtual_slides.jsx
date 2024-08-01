@@ -8,7 +8,6 @@ import 'swiper/css/virtual';
 
 import drinks from './Drinks.json'
 import CardCocktail from './Card.jsx';
-import images from './Slides'
 
 export default () => {
   // Create array with 1000 slides
@@ -25,8 +24,7 @@ console.log(images.keys(), imageList)
 
   return (
     <Swiper 
-      style={{ maxWidth: '992px', marginTop: '50px', border: 'none' }}
-      className="test"
+      className="swiper"
       modules={[Virtual, Navigation]}
       navigation
       onSlideChange={() => console.log('slide change')}
@@ -35,7 +33,9 @@ console.log(images.keys(), imageList)
     slidesPerView={1}
     virtual>
       {listDrinks.map((item, index) => (
-        <SwiperSlide key={item.idDrink} virtualIndex={index} style={{ border: 'none !important' }} >
+      
+        <SwiperSlide key={item.idDrink} virtualIndex={index}
+        className='swiper-slide'>
           {<CardCocktail
             src={imageList[index]}
             title={item.strDrink}

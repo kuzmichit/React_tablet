@@ -1,17 +1,16 @@
 import Button from 'react-bootstrap/Button';
 import { Card, Row, Col } from 'react-bootstrap';
 import React from "react";
-import img from './Slides/2x8thr1504816928.jpg';
 
 
 export default (props) => {
   
-  const {id, src, title='00000000', text='11111111'} = props
+  const {id, src, title='', text=''} = props
   
   return (
     <Card 
-    onClick={() => console.log(id)}>
-      <Card.Img variant="top" src={src} className='img'/>
+      className='card'>
+      <Card.Img variant="top" src={src} alt={'Imagine di ' + title}/>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>
