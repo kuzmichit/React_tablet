@@ -25,8 +25,6 @@ console.log(images.keys(), imageList)
 
   return (
     <Swiper 
-      style={{ maxWidth: '992px', marginTop: '50px', border: 'none' }}
-      className="test"
       modules={[Virtual, Navigation]}
       navigation
       onSlideChange={() => console.log('slide change')}

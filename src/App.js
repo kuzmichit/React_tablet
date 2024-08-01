@@ -25,8 +25,7 @@ class App extends React.Component {
     return (
       <Router>
       <Container>
-          {/*{<HeaderApp/>}*/}
-          {/* <Slides/> */}
+          {<HeaderApp/>}
           {<VirtualSlides/>}
       </Container>
       </Router>

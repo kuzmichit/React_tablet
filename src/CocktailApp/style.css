@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.container {
+  max-width: 992px;
+}
+
 .test {
   width: 400px !important;
   display: flex;
@@ -12,11 +16,11 @@
   border: none;
 }
 
-img {
-  max-width: 80%;
+.card {
+  max-width: 75%;
   display: block;
-  height: auto;
-  margin: auto;
+  margin:  10px auto;
+  padding: 10px;
 }
 
 .logo {
@@ -29,7 +33,10 @@ img {
 }
 
 .header-main {
-      padding: 0 0 0 0;
+  padding: 0;
+  margin: 0 auto;
+  width: 75%;
+  border-radius: 10px;
 }
 
 .swiper {
