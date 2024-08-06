@@ -45,3 +45,11 @@
 
 .swiper-slide{
 }
+
+.lang{
+  justify-content: end;
+}
+
+.lang-text {
+  text-align: center
+}

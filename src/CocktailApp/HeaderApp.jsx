@@ -11,15 +11,15 @@ import logo from './logo.png';
 const Navbar = () => {
   return (
     <header className="header-main bg-info mt-3">
-    <Row className="">
-        <Col xs={6} className="d-flex align-content-center">
+    <Row className="d-flex">
+      <Col xs={6} className="d-flex align-content-center">
         <img className="logo" src={logo} />
         <div className=' ps-2 header__text'>Cocktai bar</div>
       </Col>
-      <Col xs={6} className="d-flex align-items-center flex-nowrap border">
-          <Col>IT</Col>
-          <Col>EN</Col>
-          <Col>ES</Col>
+      <Col xs={6} className="d-flex align-items-center flex-nowrap lang">
+          <Col className = 'lang-text'xs={2}>IT</Col>
+          <Col className = 'lang-text'xs={2}>EN</Col>
+          <Col className = 'lang-text'xs={2}>ES</Col>
       </Col>
     </Row>
   </header>

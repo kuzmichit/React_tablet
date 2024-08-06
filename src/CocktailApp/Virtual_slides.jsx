@@ -13,6 +13,13 @@ import images from './Slides'
 export default () => {
   // Create array with 1000 slides
   const listDrinks = drinks.drinks;
+  const list = new Set();
+  listDrinks.forEach(i => {
+    
+    list.add(i);
+    
+    } );
+    console.log(list.keys())
 
 const getSrcImage = (path = []) => {
   let src = path.split('/')
@@ -20,8 +27,9 @@ const getSrcImage = (path = []) => {
   return src
 }
 let images = require.context('./Slides', true)
-const imageList = images.keys().map(image => images(image));
-console.log(images.keys(), imageList)
+const imageList = images.keys().map(image => (
+  { image: images(image) } ) );
+console.log(imageList[1])
 
   return (
     <Swiper 
