@@ -4,7 +4,7 @@ import React from "react";
 
 const FilterApp = () => {
 
-const buttonsContent = []
+const buttonsContent = ['Cocktail','Ordinary Drink','Shot','Punch/ Party Drink','Coffee / Tea','Beer']
 
   return (
     <Button variant="success">Success</Button>

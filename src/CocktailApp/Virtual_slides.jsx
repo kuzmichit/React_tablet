@@ -14,12 +14,7 @@ export default () => {
 
   const listDrinks = drinks.drinks;
   const list = new Set();
-
-  listDrinks.forEach(i => {
-    list.add(i.strCategory);
-  });
   
-    console.log(list)
 
 const getSrcImage = (path = []) => {
   let src = path.split('/')
@@ -30,21 +25,28 @@ let slideImages = require.context('./Slides', true)
 const imageList = slideImages.keys().map(image => (
   { [`${image}`]: slideImages(image) }));
   
-  console.log(imageList,'imageList');
+  
+  function clg() {
+   for (var key in imageList) {
+     console.log(key)
+   }
+ }
 
   return (
     <Swiper 
       modules={[Virtual, Navigation]}
       navigation
       onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSwiper={(swiper) => console.log('swiper')}
     spaceBetween={50}
     slidesPerView={1}
     virtual>
       {listDrinks.map((item, index) => (
-        <SwiperSlide key={item.idDrink} virtualIndex={index} style={{ border: 'none !important' }} >
+        <SwiperSlide key={item.idDrink} virtualIndex={index} style={{ border: 'none !important' }} 
+          onClick={clg()} >
+        
           {<CardCocktail
-            src={item[getSrcImage(item.strDrinkThumb)]}
+            src={slideImages[getSrcImage(item.strDrinkThumb)]}
             title={item.strDrink}
             text={item.strInstructionsIT}
           />}

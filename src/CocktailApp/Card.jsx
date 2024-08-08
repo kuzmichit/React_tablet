@@ -9,8 +9,7 @@ export default (props) => {
   const {id, src, title='00000000', text='11111111'} = props
   
   return (
-    <Card 
-    onClick={() => console.log(id)}>
+    <Card>
       <Card.Img variant="top" src={src} className='img'/>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
