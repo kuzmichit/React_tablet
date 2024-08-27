@@ -2,7 +2,7 @@ import React from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar} from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,31 +14,7 @@ import drinks from './Drinks.json'
 
 export default () => {
 
-  const A = () => {
-
-    // const elements = () => {
-    //  return (
-    //     <Card
-    //       id={id}
-    //       onClick={() => console.log(id)}>
-    //       <Card.Img variant="top" src={img} className='img' />
-    //       <Card.Body>
-    //       <Card.Title>({222222222})</Card.Title>
-    //       <Card.Text>{33333}</Card.Text>
-    //     </Card.Body>
-    //     </Card>
-    //   );
-    // };
-  
-    return (
-      <SwiperSlide>
-        {<CardCocktail/>}
-      </SwiperSlide>
-    )
-  }
-
-  
-  const getSrcImage = (path = []) => {
+const getSrcImage = (path = []) => {
     let src = path.split('/')
     src = src[src.length - 1]
     return src
@@ -75,7 +51,6 @@ export default () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {/* <Slides/> */}
       <SwiperSlide>{<CardCocktail/>}</SwiperSlide>
       <SwiperSlide>Slide 3</SwiperSlide>
     </Swiper>
