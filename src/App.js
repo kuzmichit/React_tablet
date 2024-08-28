@@ -11,7 +11,7 @@ Link,
 } from "react-router-dom";
 import HeaderApp from './CocktailApp/HeaderApp.jsx';
 import TmpBootStrap from './CocktailApp/tmpBootStrap.jsx';
-import Slides from './CocktailApp/Slides.jsx'
+import NavButtons from './CocktailApp/nav-buttons.jsx'
 import Test from './CocktailApp/test.jsx'
 import VirtualSlides from './CocktailApp/Virtual_slides.jsx';
 
@@ -27,6 +27,7 @@ class App extends React.Component {
       <Container>
           {<HeaderApp/>}
           {<VirtualSlides/>}
+          {<NavButtons/>}
       </Container>
       </Router>
   )

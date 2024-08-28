@@ -13,11 +13,6 @@ import images from './Slides'
 export default () => {
 
   const listDrinks = drinks.list;
-  const list = new Set();
-
-  listDrinks.forEach(i => {
-    list.add(i.strCategory);
-  });
 
   // la lista delle bibite per fare il filter
   const filter = ["Cocktail", "Ordinary Drink", "Shot", "Punch / Party Drink", "Coffee / Tea", "Beer"]
@@ -31,20 +26,9 @@ export default () => {
   let slideImages = require.context('./Slides', true)
   const objectSlides = {};
   const imageList = slideImages.keys().forEach(image => (
-    objectSlides[`${image}`] = slideImages(image)));
+    objectSlides[image] = slideImages(image)));
 
   console.log(slideImages);
-  // imageList.forEach(item => {
-
-  //   for (const key in item) {
-  //     if (Object.hasOwnProperty.call(item, key)) {
-  //       const element = item[key];
-
-  //       console.log(element);
-  //     }
-
-  //   }
-  // } )
 
   return (
     <Swiper 

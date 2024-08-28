@@ -53,3 +53,7 @@
 .lang-text {
   text-align: center
 }
+
+#btnPrev, #btnNext {
+  width: 200px;
+}
