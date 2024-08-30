@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 import {Row, Col} from "react-bootstrap"
 import React, { useState } from "react";
-import bootstrap from 'bootstrap';
 
 import './style.css'
 import logo from './logo.png';
@@ -14,9 +13,9 @@ const Navbar = () => {
     <Row className="d-flex">
       <Col xs={6} className="d-flex align-content-center">
         <img className="logo" src={logo} />
-        <div className=' ps-2 header__text'>Cocktai bar</div>
+        <div className=' ps-2 header__text'>Cocktail bar</div>
       </Col>
-      <Col xs={6} className="d-flex align-items-center flex-nowrap lang">
+      <Col xs={4} className="d-flex align-items-center flex-nowrap lang">
           <Col className = 'lang-text'xs={2}>IT</Col>
           <Col className = 'lang-text'xs={2}>EN</Col>
           <Col className = 'lang-text'xs={2}>ES</Col>

@@ -11,7 +11,7 @@ Link,
 } from "react-router-dom";
 import HeaderApp from './CocktailApp/HeaderApp.jsx';
 import TmpBootStrap from './CocktailApp/tmpBootStrap.jsx';
-import NavButtons from './CocktailApp/nav-buttons.jsx'
+import NavButtons from './CocktailApp/Nav-buttons.jsx'
 import Test from './CocktailApp/test.jsx'
 import VirtualSlides from './CocktailApp/Virtual_slides.jsx';
 
@@ -24,7 +24,7 @@ class App extends React.Component {
     
     return (
       <Router>
-      <Container>
+        <Container className="w-100">
           {<HeaderApp/>}
           {<VirtualSlides/>}
           {<NavButtons/>}

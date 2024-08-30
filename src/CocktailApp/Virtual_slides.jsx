@@ -25,29 +25,32 @@ export default () => {
 
   let slideImages = require.context('./Slides', true)
   const objectSlides = {};
-  const imageList = slideImages.keys().forEach(image => (
+  slideImages.keys().forEach(image => (
     objectSlides[image] = slideImages(image)));
-
-  console.log(slideImages);
 
   return (
     <Swiper 
       modules={[Virtual, Navigation]}
-      navigation
-      onSlideChange={() => console.log('slide change')}
+      navigation= { {
+        nextEl: '#btnNext',
+        prevEl: '#btnPrev',
+      }}
+     // navigation
+      onSlideChange={() => console.log('slide change---')}
       onSwiper={(swiper) => console.log(swiper)}
     spaceBetween={50}
     slidesPerView={1}
     virtual>
       {listDrinks.map((item, index) => (
-        <SwiperSlide key={item.idDrink} virtualIndex={index} style={{ border: 'none !important' }} >
+        
+          <SwiperSlide key={item.idDrink} virtualIndex={index} style={{ border: 'none !important' }} >
           {<CardCocktail
             src={objectSlides[getSrcImage(item.strDrinkThumb)]}
             title={item.strDrink}
-            text={item.strInstructionsIT}
+            text={item.strInstructionsIT} 
           />}
           </SwiperSlide>
-      ))}
+      )) }
     </Swiper>
   );
 };
