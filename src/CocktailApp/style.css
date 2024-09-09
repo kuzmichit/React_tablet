@@ -4,25 +4,20 @@
 }
 
 .container {
-  max-width: 992px;
+  width: 97vw;
+  height: 100%;
   margin: 0 auto;
 }
 
-.test {
-  width: 400px !important;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  color: #bfb;
-  border: none;
+.card {
+  display: block;
+  padding: 5px 0;
+}
+.card-img {
+  object-fit: cover;
+  margin: 0 auto;
 }
 
-.card {
-  max-width: 75%;
-  display: block;
-  margin:  10px auto;
-  padding: 10px;
-}
 
 .logo {
   width: 60px;
@@ -35,16 +30,11 @@
 
 .header-main {
   padding: 0;
-  margin: 0 auto;
-  width: 75%;
   border-radius: 10px;
 }
 
 .swiper {
-  height: 100%;
-}
-
-.swiper-slide{
+  height: 80vw;
 }
 
 .lang{
@@ -56,5 +46,15 @@
 }
 
 #btnPrev, #btnNext {
-  width: 200px;
+
+}
+
+.nav-buttons {
+  width: 97vw;
+  margin: 10px auto;
+}
+
+.nav-buttons button {
+  padding: 15px;
+  border-radius: 10px;
 }

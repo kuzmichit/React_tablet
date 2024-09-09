@@ -9,8 +9,8 @@ export default (props) => {
   const {src, title, text} = props
   
   return (
-    <Card>
-      <Card.Img variant="top" src={src} className='img' alt={title} />
+    <Card className='w-100'>
+      <Card.Img variant="top" src={src} className='card-img' alt={title} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>

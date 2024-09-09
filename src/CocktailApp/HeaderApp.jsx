@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import {Row, Col} from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import React, { useState } from "react";
 
 import './style.css'
@@ -8,6 +7,15 @@ import logo from './logo.png';
 
 
 const Navbar = () => {
+  
+  const languages = {en: 'EN', es: 'ES', it: 'IT'};
+  const [lang, setLang] = useState([languages.en]);
+  const onLangClick = e => {
+    const content = e.target.textContent.toLowerCase();
+    console.log(content)
+    setLang(languages[content])
+  }
+  
   return (
     <header className="header-main bg-info mt-3">
     <Row className="d-flex">
@@ -15,14 +23,24 @@ const Navbar = () => {
         <img className="logo" src={logo} />
         <div className=' ps-2 header__text'>Cocktail bar</div>
       </Col>
-      <Col xs={4} className="d-flex align-items-center flex-nowrap lang">
-          <Col className = 'lang-text'xs={2}>IT</Col>
-          <Col className = 'lang-text'xs={2}>EN</Col>
-          <Col className = 'lang-text'xs={2}>ES</Col>
+     <Col>
+     <div className="dropdown h-100 d-flex justify-content-end align-content-center">
+  <button className="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    {lang}
+  </button>
+  <ul className="dropdown-menu">
+    <li><a className="dropdown-item"
+    href="#" onClick={ (e)=> onLangClick(e)}>{languages.en}</a></li>
+    <li><a className="dropdown-item" 
+    href="#" onClick={ (e)=> onLangClick(e)}>{languages.es}</a></li>
+    <li><a className="dropdown-item" 
+    href="#"onClick={ (e)=> onLangClick(e)}>{languages.it}</a></li>
+  </ul>
+</div>
       </Col>
     </Row>
   </header>
-);
+  );
 }
 
 export default Navbar;

@@ -24,11 +24,11 @@ class App extends React.Component {
     
     return (
       <Router>
-        <Container className="w-100">
+        <div className='container'>
           {<HeaderApp/>}
           {<VirtualSlides/>}
           {<NavButtons/>}
-      </Container>
+      </div>
       </Router>
   )
   }
