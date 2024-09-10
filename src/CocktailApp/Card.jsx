@@ -9,12 +9,12 @@ export default (props) => {
   const {src, title, text} = props
   
   return (
-    <Card className='w-100'>
-      <Card.Img variant="top" src={src} className='card-img' alt={title} />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{text}</Card.Text>
-      </Card.Body>
-    </Card>
+  <div className="card test">
+    <img src={src} className="card-img-top card-img" alt={title}/>
+    <div className="card-body">
+      <h5 className="card-title">Card title</h5>
+      <p className="card-text">{text}</p>
+    </div>
+  </div>
   );
 }

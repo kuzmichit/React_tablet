@@ -6,7 +6,7 @@ const NavButtons = () => {
   //for(const key in window) {console.log(key)}
  // console.log(window.screen,'....')
 
-  //finire style, aggiungere logica 
+  //finire style
   return (
   <div 
   className='btn-group fixed-bottom nav-buttons' 

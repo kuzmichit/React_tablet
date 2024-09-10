@@ -9,13 +9,16 @@
   margin: 0 auto;
 }
 
-.card {
-  display: block;
+.test {
   padding: 5px 0;
 }
+
 .card-img {
-  object-fit: cover;
+  display: block;
   margin: 0 auto;
+  width: 70% !important;
+  object-fit: cover;
+  border: 1px solid #000;
 }
 
 
@@ -51,7 +54,7 @@
 
 .nav-buttons {
   width: 97vw;
-  margin: 10px auto;
+  margin: 10px auto 1px;
 }
 
 .nav-buttons button {
