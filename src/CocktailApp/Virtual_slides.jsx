@@ -29,28 +29,33 @@ export default () => {
     objectSlides[image] = slideImages(image)));
 
   return (
-    <Swiper 
-      modules={[Virtual, Navigation]}
-      navigation= { {
-        nextEl: '#btnNext',
-        prevEl: '#btnPrev',
-      }}
-     // navigation
-      onSlideChange={() => console.log('slide change---')}
-      onSwiper={(swiper) => console.log(swiper)}
-    spaceBetween={50}
-    slidesPerView={1}
-    virtual>
-      {listDrinks.map((item, index) => (
-        
-          <SwiperSlide key={item.idDrink} virtualIndex={index} style={{ border: 'none !important' }} >
-          {<CardCocktail
-            src={objectSlides[getSrcImage(item.strDrinkThumb)]}
-            title={item.strDrink}
-            text={item.strInstructionsIT} 
-          />}
-          </SwiperSlide>
-      )) }
-    </Swiper>
-  );
+		<Swiper
+			modules={[Virtual, Navigation]}
+			navigation={{
+				nextEl: "#btnNext",
+				prevEl: "#btnPrev",
+			}}
+			// navigation
+			onSlideChange={() => console.log("slide change---")}
+			onSwiper={swiper => console.log(swiper)}
+			slidesPerView={1}
+			virtual
+			className='height'
+		>
+			{listDrinks.map((item, index) => (
+				<SwiperSlide
+					key={item.idDrink}
+					virtualIndex={index}
+				>
+					{
+						<CardCocktail
+							src={objectSlides[getSrcImage(item.strDrinkThumb)]}
+							title={item.strDrink}
+							text={item.strInstructionsIT}
+						/>
+					}
+				</SwiperSlide>
+			))}
+		</Swiper>
+	);
 };
