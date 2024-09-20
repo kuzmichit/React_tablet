@@ -24,7 +24,7 @@ class App extends React.Component {
     
     return (
       <Router>
-        <div className='container'>
+        <div className='_container'>
           {<HeaderApp/>}
           {<VirtualSlides/>}
           {<NavButtons/>}

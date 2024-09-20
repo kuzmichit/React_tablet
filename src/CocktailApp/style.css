@@ -3,8 +3,9 @@
   padding: 0;
 }
 
-.container {
+._container {
   width: 97vw;
+  max-width: 1240px !important;
   height: 100%;
   margin: 0 auto;
 
@@ -12,28 +13,29 @@
 .swiper, .swiper-slide, .swiper-wrapper {
   height: auto !important;
 }
-  
-  .tmp  {
-    height: auto !important;
-  }
-
-
-.test {
-  padding: 5px 0;
-  border: 10px solid #000;
-}
 
 .card-img {
   display: block;
-  margin: 0 auto;
-  /* width: 70% !important; */
+  margin: 5px auto 20px;
+  width: 70% !important;
   object-fit: cover !important;
-  border: 10px solid #000;
 }
 
 .card {
-  border: 10px solid #000;
+  height: 80vh !important;
+  border: none !important;
+  /* overflow-y: scroll; */
 }
+
+.definition {
+  margin-right: 0.5rem;
+  background: #6ee7b7;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #047857;
+  letter-spacing: 1px;
+}
+
 
 .card__body p{
   color: red;
@@ -43,6 +45,7 @@
 .logo {
   width: 60px;
   height: 60px;
+  margin-left: 20px;
 }
 
 .header__text {
@@ -51,7 +54,7 @@
 
 .header-main {
   padding: 0;
-  border-radius: 10px;
+  border-radius: 0 0 4px 4px;
 }
 
 .swiper {
@@ -59,11 +62,13 @@
 }
 
 .lang{
+  padding-right: 10px;
   justify-content: end;
 }
 
 .lang-text {
-  text-align: center
+  text-align: center;
+  color: #0dcaf0 !important;
 }
 
 #btnPrev, #btnNext {
@@ -71,11 +76,24 @@
 }
 
 .nav-buttons {
-  width: 97vw;
-  margin: 10px auto 1px;
+  max-width: 1240px !important;
 }
 
 .nav-buttons button {
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 4px 4px 0 0;
+  opacity: 1 !important;
+  border-left: 1px solid #fff;
+}
+.dropdown-menu {
+width: 60px !important;
+min-width: 3rem !important;
+}
+
+.dropdown-item {
+  text-align: center !important;
+}
+
+.dropdown-item:active {
+  background-color: #8ce7f9 !important;
 }

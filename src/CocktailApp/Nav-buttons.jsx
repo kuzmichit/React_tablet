@@ -8,12 +8,24 @@ const NavButtons = () => {
 
   //finire style
   return (
-  <div 
-  className='btn-group fixed-bottom nav-buttons' 
-  role='group'>
-    <button className='btn btn-info' id='btnPrev'>Precedente</button>
-    <button className='btn btn-info' id='btnNext'>Successivo</button>
-  </div>)
+		<div
+			className='btn-group fixed-bottom nav-buttons'
+			role='group'
+		>
+			<button
+				className='btn btn-info'
+				id='btnPrev'
+			>
+				Precedente
+			</button>
+			<button
+				className='btn btn-info'
+				id='btnNext'
+			>
+				Successivo
+			</button>
+		</div>
+	);
 }
 
 export default NavButtons;
