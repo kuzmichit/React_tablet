@@ -5,10 +5,17 @@ import img from './Slides/2x8thr1504816928.jpg';
 
 
 export default (props) => {
+	const bodyOffsetTop = 75;
+	const bodyOffsetBottom = 70;
+	const cardHeight = Math.min(document.documentElement.clientHeight, window.innerHeight)
+		- bodyOffsetTop - bodyOffsetBottom;
+	const bodyStyle = {
+		height: cardHeight + 'px',
+	}
 	const { src, title, text } = props;
 
 	return (
-		<div className='card'>
+		<div className='card border border-info' style = {bodyStyle}>
 			<img
 				src={src}
 				className='card-img-top card-img'
