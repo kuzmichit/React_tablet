@@ -15,22 +15,31 @@
 }
 
 .card-img {
+  position: absolute;
+  right: 0;
+  z-index: 2;
   display: block;
-  margin: 5px auto 20px;
-  width: 70% !important;
+  margin: 5px 0 20px auto;
+  padding: 10px;
+  width: 40% !important;
   object-fit: cover !important;
+  background-color: #fff;
 }
 
 .card {
   margin-top: 70px;
 }
 
-.definition {
+.card-body {
+
+}
+
+.term {
   margin-right: 0.5rem;
   background: #6ee7b7;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  color: #047857;
+  color: #0478fa;
   letter-spacing: 1px;
 }
 

@@ -52,6 +52,9 @@ export default () => {
 							src={objectSlides[getSrcImage(item.strDrinkThumb)]}
 							title={item.strDrink}
 							text={item.strInstructionsIT}
+							category={item.strCategory}
+							info={item.strAlcoholic}
+							glass={item.strGlass}
 						/>
 					}
 				</SwiperSlide>

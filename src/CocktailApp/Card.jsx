@@ -9,28 +9,35 @@ export default (props) => {
 	const bodyOffsetBottom = 70;
 	const cardHeight = Math.min(document.documentElement.clientHeight, window.innerHeight)
 		- bodyOffsetTop - bodyOffsetBottom;
-	const bodyStyle = {
+	const cardStyle = {
 		height: cardHeight + 'px',
 	}
-	const { src, title, text } = props;
-
+	const { src, title, text, category, info, glass} = props;
+	const a = (item) => { 
+	  const h = document.querySelector('.card').getBoundingClientRect().height;
+	  console.log(h)
+}
 	return (
-		<div className='card border border-info' style = {bodyStyle}>
+		<div className='card border-0' style = {cardStyle}
+		onClick = { a }>
 			<img
 				src={src}
-				className='card-img-top card-img'
+				className='card-img-right card-img'
 				alt={title}
 			/>
 			<div className='card-body'>
 				<h5 className='card-title'>
-					<span className='definition'>Name:</span> {title}
+					<span className='term'>Name:</span> {title}
 				</h5>
-				<ul class='list-group list-group-flush'>
-					<li class='list-group-item'>An item</li>
-					<li class='list-group-item'>A second item</li>
-					<li class='list-group-item'>A third item</li>
+				<ul className='list-group list-group-flush'>
+					<li className='list-group-item ps-0'><span className='term'>Category:</span><span className='description'>{category}</span></li>
+					<li className='list-group-item ps-0'><span className='term'>Info:</span><span className='description'>{info}</span></li>
+					<li className='list-group-item ps-0'><span className='term'>Glass:</span><span className='description'>{glass}</span></li>
 				</ul>
 			</div>
 		</div>
 	);
 }
+
+/* quando si clicca si see more cambiare style img e list 
+creare una lista*/
