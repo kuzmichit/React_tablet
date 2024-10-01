@@ -9,7 +9,7 @@ const NavButtons = () => {
   //finire style
   return (
 		<div
-			className='btn-group fixed-bottom nav-buttons'
+			className='btn-group nav-buttons'
 			role='group'
 		>
 			<button

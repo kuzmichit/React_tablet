@@ -17,7 +17,7 @@ const Navbar = () => {
   }
   
   return (
-    <header className="header-main bg-info fixed-top">
+    <header className="header-main bg-info">
     <Row className="d-flex">
       <Col xs={6} className="d-flex align-content-center">
         <img className="logo" src={logo} />
