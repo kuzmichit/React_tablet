@@ -18,7 +18,7 @@ export default (props) => {
 	  console.log(h)
 }
 	return (
-		<div className='card border-0' style = {cardStyle}
+		<div className='card border-5 flex-grow-1'
 		onClick = { a }>
 			<img
 				src={src}

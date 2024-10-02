@@ -4,14 +4,16 @@
 }
 
 ._container {
+  display: flex;
+  flex-direction: column;
   width: 97vw;
   max-width: 1240px !important;
   height: 100%;
   margin: 0 auto;
-
 }
 .swiper, .swiper-slide, .swiper-wrapper {
   height: auto !important;
+  width: 100% !important;
 }
 
 .card-img {
@@ -28,6 +30,8 @@
 
 .card {
   margin-top: 70px;
+  height: 100% !important;
+  flex-grow: 1 !important;
 }
 
 .card-body {
